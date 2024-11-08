@@ -1,0 +1,77 @@
+/* Загальні стилі */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #fbb1bd, #ff77a9);
+  }
+  
+  /* Стилізація контейнера */
+  #app {
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Заголовок */
+  h1 {
+    color: #ff6f91;
+  }
+  
+  /* Поле вводу та кнопка */
+  .input-group {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ff6f91;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ff6f91;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #e65f7c;
+  }
+  
+  /* Список продуктів */
+  #productList {
+    margin-top: 20px;
+  }
+  
+  .product-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ffb3c1;
+  }
+  
+  .product-item .product-name {
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .product-item.bought .product-name {
+    text-decoration: line-through;
+    color: #aaa;
+  }
+  

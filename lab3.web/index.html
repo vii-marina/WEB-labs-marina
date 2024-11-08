@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список покупок</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-database.js"></script>
+  
+  <script>
+    // Firebase конфігурація та ініціалізація
+    const firebaseConfig = {
+      apiKey: "AIzaSyAgS7Gkt9dSKqHXVQn7pFNAKhxg72QhULY",
+      authDomain: "mydatabase-5f1de.firebaseapp.com",
+      databaseURL: "https://mydatabase-5f1de-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "mydatabase-5f1de",
+      storageBucket: "mydatabase-5f1de.firebasestorage.app",
+      messagingSenderId: "959379833675",
+      appId: "1:959379833675:web:47fc7d2c162afdcf951ece",
+      measurementId: "G-L11VVX59N2"
+    };
+    const app = firebase.initializeApp(firebaseConfig);
+    const database = firebase.database(app);
+  </script>
+  
+  <!-- Підключення головного скрипта з функціями -->
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    <h1>Що потрібно купити сьогодні?</h1>
+    <div class="input-group">
+      <input type="text" id="inputProduct" placeholder="Додайте продукт" />
+      <button onclick="addProduct()">Додати</button>
+    </div>
+    <div id="productList"></div>
+  </div>
+</body>
+</html>
